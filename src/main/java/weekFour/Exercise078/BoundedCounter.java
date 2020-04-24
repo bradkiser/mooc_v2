@@ -4,9 +4,13 @@ public class BoundedCounter {
     private int value;
     private int upperLimit;
 
-    public BoundedCounter(int upperLimit) {
-        this.value = 0;
+    public BoundedCounter(int value, int upperLimit) {
+        this.value = value;
         this.upperLimit = upperLimit;
+    }
+
+    public BoundedCounter(int upperLimit) {
+        this(0, upperLimit);
     }
 
     public void next() {
